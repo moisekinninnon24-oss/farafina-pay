@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farafina Pay - Votre Portefeuille Digital</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#f5f7fa;overflow-x:hidden}.app-container{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;position:relative;box-shadow:0 0 40px rgba(0,0,0,.1)}.balance-card{background:linear-gradient(135deg,#FF9500 0%,#FF6B00 100%);padding:30px 25px;border-radius:0 0 30px 30px;color:#fff;position:relative;overflow:hidden}.balance-card::before{content:'';position:absolute;width:200px;height:200px;background:rgba(255,255,255,.1);border-radius:50%;top:-100px;right:-50px}.balance-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;position:relative;z-index:1}.balance-label{font-size:14px;opacity:.95;font-weight:500}.toggle-visibility{background:rgba(255,255,255,.2);border:none;color:#fff;padding:8px 15px;border-radius:20px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:6px;transition:all .3s}.toggle-visibility:hover{background:rgba(255,255,255,.3)}.balance-amount{font-size:42px;font-weight:700;margin-bottom:25px;position:relative;z-index:1;letter-spacing:-1px}.action-buttons{display:flex;gap:12px;position:relative;z-index:1}.btn-primary{flex:1;background:#fff;color:#FF9500;border:none;padding:14px 20px;border-radius:25px;font-weight:600;font-size:14px;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(0,0,0,.1)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}.btn-secondary{flex:1;background:rgba(255,255,255,.2);color:#fff;border:2px solid rgba(255,255,255,.4);padding:14px 20px;border-radius:25px;font-weight:600;font-size:14px;cursor:pointer;transition:all .3s}.btn-secondary:hover{background:rgba(255,255,255,.3)}.quick-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:25px;margin-top:-10px}.action-item{display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;transition:transform .3s}.action-item:active{transform:scale(.95)}.action-icon{width:60px;height:60px;background:#fff;border-radius:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s}.action-item:hover .action-icon{box-shadow:0 6px 20px rgba(0,0,0,.12);transform:translateY(-3px)}.action-icon i{font-size:24px;color:#FF9500}.action-label{font-size:13px;color:#666;font-weight:500;text-align:center}.activity-section{padding:0 25px 100px 25px}.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.section-title{font-size:20px;font-weight:700;color:#1a1a1a}.see-all{color:#FF9500;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none}.transaction-list{display:flex;flex-direction:column;gap:12px}.transaction-item{background:#fff;padding:18px;border-radius:16px;display:flex;align-items:center;gap:15px;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:all .3s;cursor:pointer}.transaction-item:hover{box-shadow:0 4px 15px rgba(0,0,0,.1);transform:translateY(-2px)}.transaction-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}.icon-store{background:#FFF3E0;color:#FF9500}.icon-success{background:#E8F5E9;color:#4CAF50}.icon-shopping{background:#FFF3E0;color:#FF9500}.transaction-details{flex:1}.transaction-title{font-size:15px;font-weight:600;color:#1a1a1a;margin-bottom:4px}.transaction-date{font-size:13px;color:#999}.transaction-amount{font-size:16px;font-weight:700}.amount-negative{color:#1a1a1a}.amount-positive{color:#4CAF50}.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;padding:15px 0 20px 0;box-shadow:0 -4px 20px rgba(0,0,0,.08);border-radius:25px 25px 0 0}.nav-items{display:flex;justify-content:space-around;align-items:center}.nav-item{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;padding:8px 20px;border-radius:12px;transition:all .3s}.nav-item:hover{background:#FFF3E0}.nav-item.active{background:#FFF3E0}.nav-item i{font-size:22px;color:#999;transition:color .3s}.nav-item.active i{color:#FF9500}.nav-label{font-size:12px;color:#999;font-weight:500}.nav-item.active .nav-label{color:#FF9500}.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:1000;justify-content:center;align-items:center;backdrop-filter:blur(5px)}.modal.active{display:flex}.modal-content{background:#fff;padding:30px;border-radius:25px;width:90%;max-width:400px;max-height:80vh;overflow-y:auto;animation:slideUp .3s ease}@keyframes slideUp{from{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.modal-title{font-size:22px;font-weight:700;color:#1a1a1a}.close-modal{background:#f5f7fa;border:none;width:35px;height:35px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}.close-modal:hover{background:#e8eaed}.form-group{margin-bottom:20px}.form-label{display:block;font-size:14px;font-weight:600;color:#666;margin-bottom:8px}.form-input{width:100%;padding:15px;border:2px solid #e8eaed;border-radius:12px;font-size:15px;transition:all .3s}.form-input:focus{outline:none;border-color:#FF9500}.submit-btn{width:100%;background:linear-gradient(135deg,#FF9500 0%,#FF6B00 100%);color:#fff;border:none;padding:16px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s}.submit-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,149,0,.3)}.success-animation{text-align:center;padding:20px}.success-icon{width:80px;height:80px;background:#4CAF50;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;animation:scaleIn .5s ease}.success-icon i{font-size:40px;color:#fff}@keyframes scaleIn{from{transform:scale(0)}to{transform:scale(1)}}.success-message{font-size:18px;font-weight:600;color:#1a1a1a;margin-bottom:10px}.success-details{font-size:14px;color:#666}@media(max-width:480px){.balance-amount{font-size:36px}.quick-actions{padding:20px 15px}.activity-section{padding:0 15px 100px 15px}}
+</style>
+</head>
+<body>
+<div class="app-container">
+<div class="balance-card">
+<div class="balance-header">
+<span class="balance-label">Solde Disponible</span>
+<button class="toggle-visibility" onclick="toggleBalance()">
+<i class="fas fa-eye" id="eye-icon"></i>
+<span id="visibility-text">Afficher</span>
+</button>
+</div>
+<div class="balance-amount" id="balance-amount">810 500 FCFA</div>
+<div class="action-buttons">
+<button class="btn-primary" onclick="openModal('send')">Ajouter de l'Argent</button>
+<button class="btn-secondary" onclick="openModal('withdraw')">Retirer</button>
+</div>
+</div>
+<div class="quick-actions">
+<div class="action-item" onclick="openModal('send')">
+<div class="action-icon"><i class="fas fa-arrow-up"></i></div>
+<div class="action-label">Envoyer</div>
+</div>
+<div class="action-item" onclick="openModal('request')">
+<div class="action-icon"><i class="fas fa-arrow-down"></i></div>
+<div class="action-label">Demander</div>
+</div>
+<div class="action-item" onclick="showComingSoon()">
+<div class="action-icon"><i class="fas fa-receipt"></i></div>
+<div class="action-label">Factures</div>
+</div>
+<div class="action-item" onclick="openModal('scan')">
+<div class="action-icon"><i class="fas fa-qrcode"></i></div>
+<div class="action-label">Scanner QR</div>
+</div>
+</div>
+<div class="activity-section">
+<div class="section-header">
+<h2 class="section-title">Activité Récente</h2>
+<a href="#" class="see-all" onclick="showAllTransactions()">Voir Tout</a>
+</div>
+<div class="transaction-list" id="transaction-list">
+<div class="transaction-item">
+<div class="transaction-icon icon-store"><i class="fas fa-store"></i></div>
+<div class="transaction-details">
+<div class="transaction-title">Paiement à Jumia</div>
+<div class="transaction-date">12 juin, 10:40</div>
+</div>
+<div class="transaction-amount amount-negative">-36 500 FCFA</div>
+</div>
+<div class="transaction-item">
+<div class="transaction-icon icon-success"><i class="fas fa-check"></i></div>
+<div class="transaction-details">
+<div class="transaction-title">Virement d'Anna</div>
+<div class="transaction-date">11 juin, 20:15</div>
+</div>
+<div class="transaction-amount amount-positive">+79 000 FCFA</div>
+</div>
+<div class="transaction-item">
+<div class="transaction-icon icon-shopping"><i class="fas fa-shopping-cart"></i></div>
+<div class="transaction-details">
+<div class="transaction-title">Boutique en ligne Konga</div>
+<div class="transaction-date">10 juin, 13:22</div>
+</div>
+<div class="transaction-amount amount-negative">-59 200 FCFA</div>
+</div>
+</div>
+</div>
+<div class="bottom-nav">
+<div class="nav-items">
+<div class="nav-item active">
+<i class="fas fa-home"></i>
+<span class="nav-label">Accueil</span>
+</div>
+<div class="nav-item">
+<i class="fas fa-clock"></i>
+<span class="nav-label">Historique</span>
+</div>
+<div class="nav-item">
+<i class="fas fa-credit-card"></i>
+<span class="nav-label">Cartes</span>
+</div>
+<div class="nav-item">
+<i class="fas fa-user"></i>
+<span class="nav-label">Profil</span>
+</div>
+</div>
+</div>
+<div class="modal" id="sendModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title">Envoyer de l'Argent</h3>
+<button class="close-modal" onclick="closeModal('sendModal')"><i class="fas fa-times"></i></button>
+</div>
+<form onsubmit="handleSend(event)">
+<div class="form-group">
+<label class="form-label">Destinataire</label>
+<input type="text" class="form-input" placeholder="Numéro ou nom" required>
+</div>
+<div class="form-group">
+<label class="form-label">Montant (FCFA)</label>
+<input type="number" class="form-input" placeholder="0" required>
+</div>
+<div class="form-group">
+<label class="form-label">Note (optionnel)</label>
+<input type="text" class="form-input" placeholder="Ajouter une note">
+</div>
+<button type="submit" class="submit-btn">Envoyer Maintenant</button>
+</form>
+</div>
+</div>
+<div class="modal" id="withdrawModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title">Retirer de l'Argent</h3>
+<button class="close-modal" onclick="closeModal('withdrawModal')"><i class="fas fa-times"></i></button>
+</div>
+<form onsubmit="handleWithdraw(event)">
+<div class="form-group">
+<label class="form-label">Montant (FCFA)</label>
+<input type="number" class="form-input" placeholder="0" required>
+</div>
+<div class="form-group">
+<label class="form-label">Code Secret</label>
+<input type="password" class="form-input" placeholder="****" required>
+</div>
+<button type="submit" class="submit-btn">Retirer</button>
+</form>
+</div>
+</div>
+<div class="modal" id="requestModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title">Demander de l'Argent</h3>
+<button class="close-modal" onclick="closeModal('requestModal')"><i class="fas fa-times"></i></button>
+</div>
+<form onsubmit="handleRequest(event)">
+<div class="form-group">
+<label class="form-label">De qui ?</label>
+<input type="text" class="form-input" placeholder="Numéro ou nom" required>
+</div>
+<div class="form-group">
+<label class="form-label">Montant (FCFA)</label>
+<input type="number" class="form-input" placeholder="0" required>
+</div>
+<div class="form-group">
+<label class="form-label">Raison</label>
+<input type="text" class="form-input" placeholder="Pourquoi demandez-vous?" required>
+</div>
+<button type="submit" class="submit-btn">Envoyer la Demande</button>
+</form>
+</div>
+</div>
+<div class="modal" id="scanModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title">Scanner QR Code</h3>
+<button class="close-modal" onclick="closeModal('scanModal')"><i class="fas fa-times"></i></button>
+</div>
+<div style="text-align:center;padding:40px 20px">
+<i class="fas fa-qrcode" style="font-size:80px;color:#FF9500;margin-bottom:20px"></i>
+<p style="color:#666;margin-bottom:20px">Scannez le code QR du marchand ou d'un contact</p>
+<button class="submit-btn" onclick="showComingSoon()">Activer la Caméra</button>
+</div>
+</div>
+</div>
+<div class="modal" id="successModal">
+<div class="modal-content">
+<div class="success-animation">
+<div class="success-icon"><i class="fas fa-check"></i></div>
+<div class="success-message">Transaction Réussie !</div>
+<div class="success-details">Votre transaction a été effectuée avec succès</div>
+</div>
+<button class="submit-btn" onclick="closeModal('successModal')" style="margin-top:20px">Terminé</button>
+</div>
+</div>
+</div>
+<script>
+let balanceVisible=true,currentBalance=810500;function toggleBalance(){balanceVisible=!balanceVisible;const e=document.getElementById("balance-amount"),t=document.getElementById("eye-icon"),a=document.getElementById("visibility-text");balanceVisible?(e.textContent=currentBalance.toLocaleString("fr-FR")+" FCFA",t.className="fas fa-eye",a.textContent="Afficher"):(e.textContent="••• •••",t.className="fas fa-eye-slash",a.textContent="Masquer")}function openModal(e){const t={send:"sendModal",withdraw:"withdrawModal",request:"requestModal",scan:"scanModal"}[e];t&&document.getElementById(t).classList.add("active")}function closeModal(e){document.getElementById(e).classList.remove("active")}function handleSend(e){e.preventDefault(),closeModal("sendModal"),document.getElementById("successModal").classList.add("active"),setTimeout(()=>{const e=Math.floor(5e4*Math.random())+1e4;currentBalance-=e,addTransaction("Nouveau paiement","Maintenant",-e,"store"),updateBalance()},2e3)}function handleWithdraw(e){e.preventDefault(),closeModal("withdrawModal"),document.getElementById("successModal").classList.add("active"),setTimeout(()=>{updateBalance()},2e3)}function handleRequest(e){e.preventDefault(),closeModal("requestModal"),alert("Demande envoyée avec succès! 📲")}function addTransaction(e,t,a,n){const s=document.getElementById("transaction-list"),o=a>0,l={store:"fa-store",success:"fa-check",shopping:"fa-shopping-cart"}[n],c=`\n<div class="transaction-item">\n<div class="transaction-icon icon-${n}"><i class="fas ${l}"></i></div>\n<div class="transaction-details">\n<div class="transaction-title">${e}</div>\n<div class="transaction-date">${t}</div>\n</div>\n<div class="transaction-amount ${o?"amount-positive":"amount-negative"}">\n${o?"+":""}${Math.abs(a).toLocaleString("fr-FR")} FCFA\n</div>\n</div>`;s.insertAdjacentHTML("afterbegin",c)}function updateBalance(){balanceVisible&&(document.getElementById("balance-amount").textContent=currentBalance.toLocaleString("fr-FR")+" FCFA")}function showComingSoon(){alert("🚀 Fonctionnalité bientôt disponible !")}function showAllTransactions(){alert("📊 Page complète des transactions en développement...")}document.querySelectorAll(".nav-item").forEach(e=>{e.addEventListener("click",function(){document.querySelectorAll(".nav-item").forEach(e=>e.classList.remove("active")),this.classList.add("active")})}),document.querySelectorAll(".modal").forEach(e=>{e.addEventListener("click",function(e){e.target===this&&this.classList.remove("active")})});
+</script>
+</body>
+</html>
