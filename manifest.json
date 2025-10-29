@@ -1,0 +1,21 @@
+{
+  "name": "Farafina Pay",
+  "short_name": "Farafina",
+  "start_url": "/farafina-pay/",
+  "display": "standalone",
+  "background_color": "#FF9500",
+  "theme_color": "#FF9500",
+  "description": "Portefeuille digital pour l'Afrique",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/FF9500/ffffff?text=FP",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/FF9500/ffffff?text=FP",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
